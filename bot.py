@@ -3,8 +3,9 @@ from twisted.internet import reactor
 from quarry.net.proxy import DownstreamFactory, Bridge
 import auth
 import sys
+import os
 
-token = sys.environ["TOKEN"]
+token = os.environ["TOKEN"]
 
 class BotBridge(Bridge):
     def packet_upstream_player_position(self, buff):
